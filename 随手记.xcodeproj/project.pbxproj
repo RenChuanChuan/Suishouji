@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075BE1E31DA67E3D0091601F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075BE1E11DA67E3D0091601F /* HomeViewController.m */; };
 		180080AD1CF6884F00816E74 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180080AC1CF6884F00816E74 /* CoreGraphics.framework */; };
 		180080B01CF68CAB00816E74 /* ImageColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 180080AF1CF68CAB00816E74 /* ImageColor.m */; };
 		180080B31CFA96C000816E74 /* NavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180080B21CFA96C000816E74 /* NavView.m */; };
@@ -40,7 +41,6 @@
 		18CE50471CD97B4600ECEAC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE50461CD97B4600ECEAC7 /* AppDelegate.m */; };
 		18CE504F1CD97B4600ECEAC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CE504E1CD97B4600ECEAC7 /* Assets.xcassets */; };
 		18CE50521CD97B4600ECEAC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CE50501CD97B4600ECEAC7 /* LaunchScreen.storyboard */; };
-		18CE505F1CD97C1C00ECEAC7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE505E1CD97C1C00ECEAC7 /* HomeViewController.m */; };
 		18F822F31CFADD8400E36017 /* bt_next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F822EA1CFADD8400E36017 /* bt_next@2x.png */; };
 		18F822F41CFADD8400E36017 /* bt_previous@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F822EB1CFADD8400E36017 /* bt_previous@2x.png */; };
 		18F822F51CFADD8400E36017 /* SZCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F822ED1CFADD8400E36017 /* SZCalendarCell.m */; };
@@ -60,6 +60,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		075BE1E11DA67E3D0091601F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		075BE1E21DA67E3D0091601F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		180080AC1CF6884F00816E74 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		180080AE1CF68CAB00816E74 /* ImageColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageColor.h; sourceTree = "<group>"; };
 		180080AF1CF68CAB00816E74 /* ImageColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageColor.m; sourceTree = "<group>"; };
@@ -118,8 +120,6 @@
 		18CE504E1CD97B4600ECEAC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18CE50511CD97B4600ECEAC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18CE50531CD97B4600ECEAC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18CE505D1CD97C1C00ECEAC7 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		18CE505E1CD97C1C00ECEAC7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		18F822EA1CFADD8400E36017 /* bt_next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_next@2x.png"; sourceTree = "<group>"; };
 		18F822EB1CFADD8400E36017 /* bt_previous@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_previous@2x.png"; sourceTree = "<group>"; };
 		18F822EC1CFADD8400E36017 /* SZCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZCalendarCell.h; sourceTree = "<group>"; };
@@ -280,6 +280,8 @@
 		18CE50591CD97BF000ECEAC7 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				075BE1E11DA67E3D0091601F /* HomeViewController.m */,
+				075BE1E21DA67E3D0091601F /* HomeViewController.h */,
 				187D94381D1B6B39007FB916 /* budgetController.h */,
 				187D94391D1B6B39007FB916 /* budgetController.m */,
 				187D943A1D1B6B39007FB916 /* editCategoryViewController.h */,
@@ -288,8 +290,6 @@
 				18BE9C931D18E0EF000BEB4C /* TypeBillListViewController.m */,
 				18BE9C8C1D1780DE000BEB4C /* CakeViewController.h */,
 				18BE9C8D1D1780DE000BEB4C /* CakeViewController.m */,
-				18CE505D1CD97C1C00ECEAC7 /* HomeViewController.h */,
-				18CE505E1CD97C1C00ECEAC7 /* HomeViewController.m */,
 				185CF2BF1CF3DDF100C45E43 /* AddBillViewController.h */,
 				185CF2C01CF3DDF100C45E43 /* AddBillViewController.m */,
 				BC75D3891D00549700B9D272 /* RunningAccountViewController.h */,
@@ -492,6 +492,7 @@
 				185CF2F51CF3F91400C45E43 /* FMDatabasePool.m in Sources */,
 				18CE50441CD97B4600ECEAC7 /* main.m in Sources */,
 				187D943D1D1B6B39007FB916 /* editCategoryViewController.m in Sources */,
+				075BE1E31DA67E3D0091601F /* HomeViewController.m in Sources */,
 				187D94331D1A2EB0007FB916 /* HeaderTableViewCell.m in Sources */,
 				18488A431CF5527600265F9A /* MoneyView.m in Sources */,
 				1804F34E1CFFD2FE00A4969F /* AddBtnView.m in Sources */,
@@ -500,7 +501,6 @@
 				18488A461CF5E86800265F9A /* CalculatorView.m in Sources */,
 				180080B31CFA96C000816E74 /* NavView.m in Sources */,
 				185CF2C11CF3DDF100C45E43 /* AddBillViewController.m in Sources */,
-				18CE505F1CD97C1C00ECEAC7 /* HomeViewController.m in Sources */,
 				187D943C1D1B6B39007FB916 /* budgetController.m in Sources */,
 				18F822F61CFADD8400E36017 /* SZCalendarPicker.m in Sources */,
 				185CF2F41CF3F91400C45E43 /* FMDatabaseAdditions.m in Sources */,

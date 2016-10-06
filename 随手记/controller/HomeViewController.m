@@ -242,13 +242,28 @@
 //
 }
 
-
+- (void)longPressOfHeadImage
+{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"更换图片" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self constomPhoto];
+    }];
+    [controller addAction:cancelAction];
+    [controller addAction:action];
+    [self presentViewController:controller animated:YES completion:nil];
+}
 
 - (void)displayView{
     //头部图片显示
     
     self.headView = [[UIView alloc]initWithFrame:CGRectMake(0,0, SVIEW_WIDTH, SVIEW_HIGHT/4)];
+    UILongPressGestureRecognizer * longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressOfHeadImage)];
+    [self.headView addGestureRecognizer:longPress];
     self.headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.headView.frame.size.width, KimageHeight)];
+    
+    
+    
     self.headImageView.image = [UIImage imageNamed:@"night"];
     if ([self.dataBase isHaveImage] ) {
         self.headImageView.image = [self.dataBase readImage][0];
@@ -274,18 +289,18 @@
     //
     
     //更改图片
-    self.constomPhoto = [[UIButton alloc]initWithFrame:CGRectMake(SVIEW_WIDTH-70, 20, KDailyBillWidth/2, KDailyBillHeight)];
-    [self.constomPhoto setBackgroundImage:[UIImage imageNamed:@"ph"] forState:UIControlStateNormal];
-    self.constomPhoto.titleLabel.font = [UIFont systemFontOfSize:15];
-    [self.constomPhoto setBackgroundColor:[UIColor colorWithWhite:0.3 alpha:0.3]];
-    
-    [self.constomPhoto hyb_addCornerRadius:30];
-    self.constomPhoto.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter; //文字居中
-    self.constomPhoto.contentEdgeInsets = UIEdgeInsetsMake(0,10, 0, 10); //文字距离边框10个像素
-    
-    [self.constomPhoto addTarget:self action:@selector(constomPhoto:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.headView addSubview:self.constomPhoto];
+//    self.constomPhoto = [[UIButton alloc]initWithFrame:CGRectMake(SVIEW_WIDTH-70, 20, 32, 32)];
+//    [self.constomPhoto setBackgroundImage:[UIImage imageNamed:@"ph"] forState:UIControlStateNormal];
+//    self.constomPhoto.titleLabel.font = [UIFont systemFontOfSize:15];
+//    [self.constomPhoto setBackgroundColor:[UIColor colorWithWhite:0.3 alpha:0.3]];
+//    
+//    [self.constomPhoto hyb_addCornerRadius:30];
+//    self.constomPhoto.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter; //文字居中
+//    self.constomPhoto.contentEdgeInsets = UIEdgeInsetsMake(0,10, 0, 10); //文字距离边框10个像素
+//    
+//    [self.constomPhoto addTarget:self action:@selector(constomPhoto:) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    [self.headView addSubview:self.constomPhoto];
     [self.view addSubview:self.headView];
     
     //总收入
@@ -495,7 +510,7 @@
 }
 #pragma mark  顶部背景图片点击点击事件
 
-- (void)Balance: (UIButton *)sender
+- (void)Balance:(UIButton *) sender
 {
     if (self.isClick == YES)
     {
@@ -557,7 +572,7 @@
 }
 
 #pragma mark 读取图片
-- (void)constomPhoto:(UIButton *)sender
+- (void)constomPhoto
 {
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
         UIImagePickerController *Picker = [[UIImagePickerController alloc]init]; //读取本地图片
